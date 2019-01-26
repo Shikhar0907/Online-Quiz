@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Questions View</title>
+</head>
+<body>
+    <h1>View all the Questions!</h1>
+    <h3> Handy </h3>
+    {% for ques in questions %}
+
+        <h1> {% if ques.category == 'Handy' %} </h1><br>
+                {{ ques.questions }}<br>
+                <ul>
+
+                    <li>{{ ques.choice1 }}</li>
+                    <li>{{ ques.choice2 }}</li>
+                    <li>{{ ques.choice3 }}</li>
+                    <li>{{ ques.choice4 }}</li>
+                    <li>{{ ques.answers }}</li>
+
+                </ul>
+
+            {% endif %}
+
+    {% endfor %}
+</body>
+</html>
